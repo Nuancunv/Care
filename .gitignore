@@ -1,0 +1,61 @@
+# Secrets & Local Config (NEVER COMMIT API KEYS OR SIGNING KEYS)
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.jks
+*.keystore
+key.properties
+local.properties
+settings.local.yaml
+secrets/
+
+# Upstream local reference clones (do not publish)
+upstream/
+
+# Flutter / Dart
+.dart_tool/
+**/.dart_tool/
+.packages
+build/
+**/build/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+
+# Android / Gradle
+app/android/.gradle/
+app/android/.kotlin/
+app/android/.cxx/
+app/android/captures/
+app/android/local.properties
+*.apk
+*.aab
+*.hprof
+
+# Node.js / Plugins
+node_modules/
+**/node_modules/
+npm-debug.log*
+pnpm-debug.log*
+*.log
+.DS_Store
+
+# Runtime & Release Archives
+runtime/dist/
+runtime/cache/
+*.tar.gz
+*.tar.xz
+*.zip
+
+# Local AI Agent & Dev Planning Docs (keep locally, do not publish)
+AGENTS.md
+plan.md
+progress.md
+
+# IDE & OS
+.idea/
+.vscode/
+Thumbs.db

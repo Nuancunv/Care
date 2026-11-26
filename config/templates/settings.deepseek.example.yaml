@@ -1,0 +1,36 @@
+# Care — DeepSeek Direct Provider Configuration Template (Zero Cloud Relay)
+# 实际运行时由 Android 原生层安全读取 Keystore 中的 API Key 并通过环境变量注入，
+# 严禁将真实 API Key 硬编码写入此文件或提交至 Git。
+
+defaultProvider: deepseek-direct
+defaultModel: deepseek-chat
+
+providers:
+  deepseek-direct:
+    displayName: "DeepSeek Official Direct (BYOK)"
+    api: openai-completions
+    baseURL: "https://api.deepseek.com/v1"
+    apiKeyEnv: DEEPSEEK_API_KEY
+    models:
+      - id: deepseek-chat
+        name: "DeepSeek Chat (快速日常对话与轻量工具调用)"
+        contextWindow: 65536
+      - id: deepseek-reasoner
+        name: "DeepSeek Reasoner (复杂规划、长程推理与目标拆解)"
+        contextWindow: 65536
+
+  # 可选：局域网 / 本机自定义 OpenAI 兼容端点（如 Ollama / vLLM）
+  # custom-openai:
+  #   displayName: "Custom OpenAI-Compatible Endpoint"
+  #   api: openai-completions
+  #   baseURL: "http://127.0.0.1:11434/v1"
+  #   apiKeyEnv: CUSTOM_API_KEY
+  #   models:
+  #     - id: qwen3:4b
+  #       name: "Local Model"
+  #       contextWindow: 16384
+
+network:
+  # Care 默认关闭任何第三方云中继与遥测上报
+  cloudRelayEnabled: false
+  telemetryEnabled: false

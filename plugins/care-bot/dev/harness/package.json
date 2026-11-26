@@ -1,0 +1,9 @@
+{
+  "name": "care-bot-test-harness",
+  "private": true,
+  "description": "DeepSeek Harness packages used to run care-bot host unit tests.",
+  "dependencies": {
+    "@deepseek-ai/dsh": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-agent-loop-testkit": "0.2.2-rc.1"
+  }
+}

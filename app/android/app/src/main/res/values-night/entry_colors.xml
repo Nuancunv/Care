@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dark launcher: Care sage/jade dark container and on-container tones. -->
+<resources>
+    <color name="shortcut_icon_background">#FF1C473C</color>
+    <color name="shortcut_icon_glyph">#FFB9E8D9</color>
+</resources>

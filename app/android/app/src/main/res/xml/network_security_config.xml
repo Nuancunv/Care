@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- External connections (e.g., api.deepseek.com) MUST use HTTPS. -->
+    <base-config cleartextTrafficPermitted="false" />
+    <!-- Only on-device loopback to the local PRoot DSH engine permits HTTP/WS. -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="false">localhost</domain>
+    </domain-config>
+</network-security-config>

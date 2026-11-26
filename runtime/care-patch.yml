@@ -1,0 +1,15 @@
+# Care — DeepSeek Harness Cordis Overlay Patch (Local-First / Zero Cloud Relay)
+# Bundled into the offline ARM64 runtime alongside `plugins/care-bot`.
+- insert:
+    - id: care-bot
+      name: care-bot
+    - id: web-search-auto
+      name: care-bot/web-search
+
+- id: web
+  config:
+    searchProvider: auto
+    fetchProvider: http
+
+- id: ui-settings-general
+  disabled: true
